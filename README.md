@@ -5,12 +5,12 @@
 ## Prerequisites
 
 -   [Ruby Enumerable
-    Builtins](https://github.com/ga-wdi-boston/ruby-enumerable-builtins)
--   [Ruby Object](https://github.com/ga-wdi-boston/ruby-object)
+    Builtins](https://git.generalassemb.ly/ga-wdi-boston/ruby-enumerable-builtins)
+-   [Ruby Object](https://git.generalassemb.ly/ga-wdi-boston/ruby-object)
 
 ## Objectives
 
-By the end of this talk, developers should be able to:
+By the end of this, developers should be able to:
 
 -   Add Comparable operators to a class.
 -   Add Enumerable methods to a class.
@@ -18,7 +18,7 @@ By the end of this talk, developers should be able to:
 ## Preparation
 
 1.  Fork and clone this repository.
-    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create a new branch, `training`, for your work.
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `bundle install`.
@@ -39,7 +39,7 @@ is "greater" than the other.
 
 ### Demo - A Card Model
 
-The [Comparable](http://ruby-doc.org/core-2.3.1/Comparable.html) module provide
+The [Comparable](http://ruby-doc.org/core-2.4.1/Comparable.html) module provide
 common operators to a class that implements the `<=>` (spaceship) operator.
 Let's look at `lib/card.rb`.
 
@@ -80,7 +80,7 @@ Foo.new.bar # this does not work
 ## The Enumerable Module
 
 We'll build our own `list` using Ruby's
-[Enumerable](http://ruby-doc.org/core-2.3.1/Enumerable.html) module.
+[Enumerable](http://ruby-doc.org/core-2.4.1/Enumerable.html) module.
 
 ### Code along - Stepped Range
 
