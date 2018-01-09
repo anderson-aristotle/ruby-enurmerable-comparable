@@ -4,29 +4,32 @@
 
 ## Prerequisites
 
--   [Ruby Enumerable
+- [Ruby Enumerable
     Builtins](https://git.generalassemb.ly/ga-wdi-boston/ruby-enumerable-builtins)
--   [Ruby Object](https://git.generalassemb.ly/ga-wdi-boston/ruby-object)
+- [Ruby Object](https://git.generalassemb.ly/ga-wdi-boston/ruby-object)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Add Comparable operators to a class.
--   Add Enumerable methods to a class.
+- Add Comparable operators to a class.
+- Add Enumerable methods to a class.
 
 ## Preparation
 
-1.  Fork and clone this repository.
+1. Fork and clone this repository.
  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create a new branch, `training`, for your work.
-1.  Checkout to the `training` branch.
-1.  Install dependencies with `bundle install`.
+1. Create a new branch, `training`, for your work.
+1. Checkout to the `training` branch.
+1. Install dependencies with `bundle install`.
 
 ## Introduction
 
 We'll explore an important Ruby mechanism for adding behavior to a class:
 mixins.
+
+Comparable is a mixin that the Enumerable mixin relies on for several method's
+implementations.
 
 ## The Comparable Module
 
@@ -57,6 +60,7 @@ Let's explore the start of writing a card game in Ruby using `lib/card.rb` and
 `lib/deck.rb`.
 
 ## Private methods
+
 It's a best practice to keep our exposed API as small as necessary. I like to
 keep methods private by default (just like data is) by decorating them with
 the `private` method. This makes them uncallable outside the class definition.
@@ -92,16 +96,18 @@ method.
 
 Developers should run these often!
 
--   `bin/rake nag`  (or `bundle exec rake nag`): runs code quality analysis
+- `bin/rake nag`  (or `bundle exec rake nag`): runs code quality analysis
     tools on your code and complains.
--   `bin/rake test` (or `bundle exec rake test`): runs automated tests.
+- `bin/rake test` (or `bundle exec rake test`): runs automated tests.
 
 ## Additional Resources
 
--   [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
+- [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
+- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
+- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
