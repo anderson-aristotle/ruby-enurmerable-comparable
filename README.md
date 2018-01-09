@@ -28,6 +28,9 @@ By the end of this, developers should be able to:
 We'll explore an important Ruby mechanism for adding behavior to a class:
 mixins.
 
+Comparable is a mixin that the Enumerable mixin relies on for several method's 
+implementations.
+
 ## The Comparable Module
 
 ### Lab - comparing cards
