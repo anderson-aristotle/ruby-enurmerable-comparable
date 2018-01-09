@@ -103,6 +103,8 @@ Developers should run these often!
 ## Additional Resources
 
 - [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
+- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
+- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
 
 ## [License](LICENSE)
 
