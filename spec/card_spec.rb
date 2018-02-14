@@ -3,6 +3,14 @@
 require_relative '../lib/card.rb'
 
 RSpec.describe 'Card class' do
+  it 'has a RANKS constant array of the correct ranks' do
+    expect(Card::RANKS).to eq [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
+  end
+
+  it 'has a SUITS constant array of the correct suits' do
+    expect(Card::SUITS).to eq %w[C D H S]
+  end
+
   it 'includes the Comparable module' do
     expect(Card.included_modules.include?(Comparable)).to be true
   end
