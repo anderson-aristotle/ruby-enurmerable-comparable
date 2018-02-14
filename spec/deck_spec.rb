@@ -19,4 +19,9 @@ RSpec.describe 'Deck class' do
     new_deck.deal(3, hand_one, hand_two)
     expect(hand_one[0].class).to eq(Card)
   end
+
+  it "doesn't allow for '.storage' to be invoked from outside the class" do
+    newer_deck = Deck.new
+    expect { newer_deck.storage }.to raise_error(NoMethodError)
+  end
 end
