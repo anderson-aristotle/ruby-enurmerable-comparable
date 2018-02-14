@@ -15,6 +15,14 @@ RSpec.describe 'Card class' do
     expect(Card.included_modules.include?(Comparable)).to be true
   end
 
+  it 'does not allow for creation of a Card with incorrect suit' do
+    expect { Card.new(3, 'G') }.to raise_error(ArgumentError)
+  end
+
+  it 'does not allow for creation of a Card with incorrect rank' do
+    expect { Card.new('R', 'H') }.to raise_error(ArgumentError)
+  end
+
   it 'allows two instances of the Card class to be compared to each other' do
     card_one = Card.new(3, 'S')
     card_two = Card.new(5, 'S')
