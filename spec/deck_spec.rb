@@ -10,4 +10,13 @@ RSpec.describe 'Deck class' do
   it "has an 'each' method defined" do
     expect(Deck.method_defined?(:each)).to be true
   end
+
+  it "provides a 'deal' method that deals out hands of Cards" do
+    new_deck = Deck.new
+    hand_one = []
+    hand_two = []
+    expect(Deck.method_defined?(:deal)).to be true
+    new_deck.deal(3, hand_one, hand_two)
+    expect(hand_one[0].class).to eq(Card)
+  end
 end
