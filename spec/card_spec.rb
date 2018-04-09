@@ -30,7 +30,7 @@ RSpec.describe 'Card class' do
     card_four = Card.new(10, 'D')
     card_five = Card.new(9, 'D')
 
-    expect { card_one > card_two }.not_to raise_error(NoMethodError)
+    expect(card_one.methods.include?(:<=>)).to be true
     expect(card_one < card_two).to be true
     expect(card_three < card_one).to be true
     expect(card_five > card_four).to be false
