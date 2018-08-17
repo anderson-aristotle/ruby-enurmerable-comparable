@@ -1,5 +1,9 @@
 # Delivery Notes
 
+## Note about .freeze
+
+You’ll often see freeze used when assigning constants, to ensure that the values can’t be mutated. This is because reassigning a constant variable will generate a warning, but mutating a constant value will not.
+
 ## Framing
 
 This lesson is part of the ruby sequence and specifically part of the ruby-enumerable sequence.
