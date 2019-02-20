@@ -227,6 +227,10 @@ Developers should run these often!
 
 ## Additional Resources
 
+- [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
+- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
+- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
+
 Two images to give you a sense of the relationships between types in Ruby.
 
 - [Hand drawn](http://farm6.staticflickr.com/5443/10075536704_84aa13676a_o.jpg)
@@ -234,12 +238,6 @@ Two images to give you a sense of the relationships between types in Ruby.
 
 These images may diverge slightly from the actual relationships, Ruby is an
 evolving language, but do give a sense of much of what goes on.
-
-Other resources:
-
-- [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
-- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
-- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
 
 ## [License](LICENSE)
 
