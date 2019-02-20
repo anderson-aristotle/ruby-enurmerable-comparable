@@ -166,33 +166,34 @@ implementations.
 
 How do you compare cards?
 
-In your squads create an algorithm to determine which of two cards, if either,
+In teams create an algorithm to determine which of two cards, if either,
 is "greater" than the other.
 
-### Demo - A Card Model
+### Code Along - Card and Deck Models
 
-The [Comparable](http://ruby-doc.org/core-2.5.0/Comparable.html) module provide
+The [Comparable](http://ruby-doc.org/core-2.5.0/Comparable.html) module provides
 common operators to a class that implements the `<=>` (spaceship) operator.
-Let's look at `lib/card.rb`.
+Let's add the Comparable mixin to the Card class in `lib/card.rb`.
 
-Adding the spaceship operator to `Card`.
+The docs specify two things for the mixin to work with the class:
 
-### Lab - A list as a deck of cards
+- Add the spaceship operator (`<=>`) to `Card`.
+- Include the mixin in the class.
 
-Let's simulate Enumerable methods using a deck of cards.  In your squad, one of
-you will act as the method and another as the block. The third squad member
-will record the result.
+Once the cards can be compared, we can also go about adding the Enumerable
+mixin to the Deck class in `lib/deck.rb`. For this the docs specify two similar
+things for the custom class:
 
-### Demo - A Deck Model
-
-Let's explore the start of writing a card game in Ruby using `lib/card.rb` and
-`lib/deck.rb`.
+- Add the `each` method to `Deck`.
+- Include the mixin in the class.
 
 ## Private methods
 
-It's a best practice to keep our exposed API as small as necessary. I like to
-keep methods private by default (just like data is) by decorating them with
-the `private` method. This makes them uncallable outside the class definition.
+It's a best practice to keep the exposed API as small as necessary. Keeping
+methods private by default (just like data is) is usually a safe bet. We can do
+this by decorating them with the `private` method. This makes them uncallable
+outside the class definition.
+
 For example:
 
 ```ruby
@@ -209,11 +210,6 @@ end
 
 Foo.new.bar # this does not work
 ```
-
-## Incuding the Enumerable Module
-
-We'll build our own `list` using Ruby's
-[Enumerable](http://ruby-doc.org/core-2.4.1/Enumerable.html) module.
 
 ### Code along - Stepped Range
 
