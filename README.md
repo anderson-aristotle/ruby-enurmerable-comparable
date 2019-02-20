@@ -13,7 +13,7 @@ By the end of this, developers should be able to:
 - Define “list” and give two examples of lists in Ruby.
 - Diagram the flow of Enumerable methods as invoked through concrete classes.
 - Give two examples of methods defined in Enumerable and available on all
-    three of Range, Array, and Hash.
+  three of Range, Array, and Hash.
 - Add Comparable operators to a class.
 - Add Enumerable methods to a class.
 
@@ -28,7 +28,7 @@ By the end of this, developers should be able to:
 ## Introduction
 
 A list is an abstract data type (ADT) that represents an ordered collection of
-items. The list may be empty.  If not empty, the list has a first item followed
+items. The list may be empty. If not empty, the list has a first item followed
 by a list containing the rest of the items. This is not a rigorous definition.
 
 Enumerable is Ruby's implementation of the `list` abstraction.
@@ -65,7 +65,7 @@ is another word for "iteratable", so we can say that each of Ruby's `Array`,
 
 Ruby's [Enumerable](https://ruby-doc.org/core-2.5.0/Enumerable.html) module
 provides many list processing methods relying on a class's `each` method.
-Ruby's Array clas## Introductions includes the Enumerable module.
+Ruby's Array class includes the Enumerable module.
 
 ### Modules
 
@@ -93,6 +93,7 @@ we can treat instances as a list.
 
 ```ruby
 rng = 1..10
+smaller_rng = 1...10
 ```
 
 ### Code along - Range
