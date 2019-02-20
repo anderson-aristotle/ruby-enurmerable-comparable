@@ -28,7 +28,7 @@ class Deck
     storage.shift
   end
 
-  def shuffle
+  def shuffle!
     storage.shuffle!
     self
   end
