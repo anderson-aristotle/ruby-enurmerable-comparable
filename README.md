@@ -170,7 +170,7 @@ is "greater" than the other.
 
 ### Demo - A Card Model
 
-The [Comparable](http://ruby-doc.org/core-2.4.1/Comparable.html) module provide
+The [Comparable](http://ruby-doc.org/core-2.5.0/Comparable.html) module provide
 common operators to a class that implements the `<=>` (spaceship) operator.
 Let's look at `lib/card.rb`.
 
