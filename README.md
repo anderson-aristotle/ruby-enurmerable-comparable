@@ -211,18 +211,29 @@ end
 Foo.new.bar # this does not work
 ```
 
-### Code along - Stepped Range
+### Lab - Stepped Range
 
 We'll build a new range class that increments by a provided value. The key to
 creating an `Enumerable` class is a correct implementation of the `each`
 method.
+
+For this new class called `SteppedRange` you can work in the `lib/stepped_range.rb` file. The goal is to be able to create an instance of
+`SteppedRange` where you pass in the number for the range to start at, the
+number for the range to end at, and the number that each step should increment
+by.
+
+So if you created one like `SteppedRange.new(2, 10, 2)` it would produce a
+range that contained the numbers: 2, 4, 6, 8, 10.
+
+You can test your solution by running only the tests for this specific lab. The
+command to do that is `rspec spec/stepped_range_spec.rb`.
 
 ## Tasks
 
 Developers should run these often!
 
 - `bin/rake nag`  (or `bundle exec rake nag`): runs code quality analysis
-    tools on your code and complains.
+  tools on your code and complains.
 - `bin/rake test` (or `bundle exec rake test`): runs automated tests.
 
 ## Additional Resources
@@ -243,4 +254,4 @@ evolving language, but do give a sense of much of what goes on.
 
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+   alternative licensing, please contact legal@ga.co.
