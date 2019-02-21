@@ -219,8 +219,8 @@ method.
 
 For this new class called `SteppedRange` you can work in the `lib/stepped_range.rb` file. The goal is to be able to create an instance of
 `SteppedRange` where you pass in the number for the range to start at, the
-number for the range to end at, and the number that each step should increment
-by.
+number for the range to stop at, and the number that each step should increment
+by (interval).
 
 So if you created one like `SteppedRange.new(2, 10, 2)` it would produce a
 range that contained the numbers: 2, 4, 6, 8, 10.
