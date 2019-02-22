@@ -13,7 +13,7 @@ By the end of this, developers should be able to:
 - Define “list” and give two examples of lists in Ruby.
 - Diagram the flow of Enumerable methods as invoked through concrete classes.
 - Give two examples of methods defined in Enumerable and available on all
-    three of Range, Array, and Hash.
+  three of Range, Array, and Hash.
 - Add Comparable operators to a class.
 - Add Enumerable methods to a class.
 
@@ -28,7 +28,7 @@ By the end of this, developers should be able to:
 ## Introduction
 
 A list is an abstract data type (ADT) that represents an ordered collection of
-items. The list may be empty.  If not empty, the list has a first item followed
+items. The list may be empty. If not empty, the list has a first item followed
 by a list containing the rest of the items. This is not a rigorous definition.
 
 Enumerable is Ruby's implementation of the `list` abstraction.
@@ -65,7 +65,7 @@ is another word for "iteratable", so we can say that each of Ruby's `Array`,
 
 Ruby's [Enumerable](https://ruby-doc.org/core-2.5.0/Enumerable.html) module
 provides many list processing methods relying on a class's `each` method.
-Ruby's Array clas## Introductions includes the Enumerable module.
+Ruby's Array class includes the Enumerable module.
 
 ### Modules
 
@@ -93,6 +93,7 @@ we can treat instances as a list.
 
 ```ruby
 rng = 1..10
+smaller_rng = 1...10
 ```
 
 ### Code along - Range
@@ -165,33 +166,34 @@ implementations.
 
 How do you compare cards?
 
-In your squads create an algorithm to determine which of two cards, if either,
+In teams create an algorithm to determine which of two cards, if either,
 is "greater" than the other.
 
-### Demo - A Card Model
+### Code Along - Card and Deck Models
 
-The [Comparable](http://ruby-doc.org/core-2.4.1/Comparable.html) module provide
+The [Comparable](http://ruby-doc.org/core-2.5.0/Comparable.html) module provides
 common operators to a class that implements the `<=>` (spaceship) operator.
-Let's look at `lib/card.rb`.
+Let's add the Comparable mixin to the Card class in `lib/card.rb`.
 
-Adding the spaceship operator to `Card`.
+The docs specify two things for the mixin to work with the class:
 
-### Lab - A list as a deck of cards
+- Add the spaceship operator (`<=>`) to `Card`.
+- Include the mixin in the class.
 
-Let's simulate Enumerable methods using a deck of cards.  In your squad, one of
-you will act as the method and another as the block. The third squad member
-will record the result.
+Once the cards can be compared, we can also go about adding the Enumerable
+mixin to the Deck class in `lib/deck.rb`. For this the docs specify two similar
+things for the custom class:
 
-### Demo - A Deck Model
-
-Let's explore the start of writing a card game in Ruby using `lib/card.rb` and
-`lib/deck.rb`.
+- Add the `each` method to `Deck`.
+- Include the mixin in the class.
 
 ## Private methods
 
-It's a best practice to keep our exposed API as small as necessary. I like to
-keep methods private by default (just like data is) by decorating them with
-the `private` method. This makes them uncallable outside the class definition.
+It's a best practice to keep the exposed API as small as necessary. Keeping
+methods private by default (just like data is) is usually a safe bet. We can do
+this by decorating them with the `private` method. This makes them uncallable
+outside the class definition.
+
 For example:
 
 ```ruby
@@ -209,26 +211,36 @@ end
 Foo.new.bar # this does not work
 ```
 
-## Incuding the Enumerable Module
-
-We'll build our own `list` using Ruby's
-[Enumerable](http://ruby-doc.org/core-2.4.1/Enumerable.html) module.
-
-### Code along - Stepped Range
+### Lab - Stepped Range
 
 We'll build a new range class that increments by a provided value. The key to
 creating an `Enumerable` class is a correct implementation of the `each`
 method.
+
+For this new class called `SteppedRange` you can work in the `lib/stepped_range.rb` file. The goal is to be able to create an instance of
+`SteppedRange` where you pass in the number for the range to start at, the
+number for the range to stop at, and the number that each step should increment
+by (interval).
+
+So if you created one like `SteppedRange.new(2, 10, 2)` it would produce a
+range that contained the numbers: 2, 4, 6, 8, 10.
+
+You can test your solution by running only the tests for this specific lab. The
+command to do that is `rspec spec/stepped_range_spec.rb`.
 
 ## Tasks
 
 Developers should run these often!
 
 - `bin/rake nag`  (or `bundle exec rake nag`): runs code quality analysis
-    tools on your code and complains.
+  tools on your code and complains.
 - `bin/rake test` (or `bundle exec rake test`): runs automated tests.
 
 ## Additional Resources
+
+- [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
+- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
+- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
 
 Two images to give you a sense of the relationships between types in Ruby.
 
@@ -238,14 +250,8 @@ Two images to give you a sense of the relationships between types in Ruby.
 These images may diverge slightly from the actual relationships, Ruby is an
 evolving language, but do give a sense of much of what goes on.
 
-Other resources:
-
-- [List ADT](https://en.wikipedia.org/wiki/List_%28abstract_data_type%29)
-- [Ruby Lazy Enumerator](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
-- [Deeper Dive into Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html)
-
 ## [License](LICENSE)
 
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+   alternative licensing, please contact legal@ga.co.

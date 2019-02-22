@@ -2,11 +2,11 @@
 
 #
 class SteppedRange
-  attr_reader :start, :stop, :step
-  private :start, :stop, :step
-  def initialize(start, stop, step)
+  attr_reader :start, :stop, :interval
+  private :start, :stop, :interval
+  def initialize(start, stop, interval)
     @start = start
     @stop = stop
-    @step = step
+    @interval = interval
   end
 end
